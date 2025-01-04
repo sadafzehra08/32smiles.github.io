@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            background-image: url();
+        }
+
+        .navbar {
+            position: relative;
+            z-index: 10;
+        }
+
+        .navbar-brand {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .navbar-nav {
+            font-size: 18px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(to right, #2b6d85, #407099);
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .team-section {
+            margin-top: 3rem;
+        }
+
+        .profile-card {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .profile-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-card img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 1rem;
+        }
+
+        .profile-card button {
+            margin-top: 1rem;
+            background: linear-gradient(to right, #2b6d85, #407099);
+            border: none;
+        }
+
+        footer {
+            background: linear-gradient(to right, #2b6d85, #407099);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin: 20px;
+            min-width: 200px;
+        }
+
+
+        .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin: 10px 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .footer-section ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">32 SMILES</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-2"><a class="nav-link" href="home.html">HOME</a></li>
+
+                    <li class="nav-item mx-2"><a class="nav-link" href="aboutus.html">ABOUT US</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="patientseducation.html">PATIENTS EDUCATION</a>
+                    </li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="contactus.html">CONTACT US</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="regularcare.html">REGULAR CARE</a></li>
+                </ul>
+
+                <div class="d-flex">
+                    <button class="btn" style="color: white; background: linear-gradient(to right, #2b6d85, #407099);
+; border: none; height: 40px; border-radius: 2px;" type="button">
+                        BOOK ONLINE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h2>Our Doctors, Your Health</h2>
+        <p>Our team of highly qualified doctors represents a diverse range of specialties, dedicated to providing
+            exceptional dental care and personalized treatment.</p>
+    </div>
+
+    <div class="container team-section">
+        <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"
+            class="text-center mb-4">Our Dedicated Medical Team</h2>
+        <div class="row text-center">
+            <!-- Row 1 -->
+            <div class="col-md-3">
+                <div class="profile-card">
+                    <img src="data:image/png;base64,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"
+                        alt="Dr. Sarah Johnson">
+                    <h5>Dr. Sarah Johnson</h5>
+                    <p>Dental Surgeon</p>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#timingModal1">View
+                        Timings</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="profile-card">
+                    <img src="https://img.freepik.com/free-photo/portrait-3d-male-doctor_23-2151107071.jpg"
+                        alt="Dr. Mike Brown">
+                    <h5>Dr. Mike Brown</h5>
+                    <p>Orthodontist</p>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#timingModal2">View
+                        Timings</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="profile-card">
+                    <img src="https://cdn3d.iconscout.com/3d/premium/thumb/dentist-3d-icon-download-in-png-blend-fbx-gltf-file-formats--tooth-teeth-doctor-profile-person-avatars-pack-people-icons-8772459.png"
+                        alt="Dr. Emily Davis">
+                    <h5>Dr. Emily Davis</h5>
+                    <p>Periodontist</p>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#timingModal3">View
+                        Timings</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="profile-card">
+                    <img src="https://img.freepik.com/free-psd/3d-illustration-stomatology-dentistry_23-2150033495.jpg"
+                        alt="Dr. John Smith">
+                    <h5>Dr. John Smith</h5>
+                    <p>Endodontist</p>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#timingModal4">View
+                        Timings</button>
+                </div>
+            </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="row text-center mt-4">
+            <div class="col-md-3">
+                <div class="profile-card">
+                    <img src="https://img.freepik.com/premium-vector/man-with-lab-coat-that-says-he-is-smiling_670382-387642.jpg?semt=ais_hybrid"
+                        alt="Dr. Rachel Green">
+                    <h5>Dr. Rachel Green</h5>
+                    <p>Prosthodontist</p>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#timingModal5">View
+                        Timings</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="profile-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2991/2991292.png" alt="Dr. Ross Geller">
+                    <h5>Dr. Ross Geller</h5>
+                    <p>Oral Surgeon</p>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#timingModal6">View
+                        Timings</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="profile-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3349/3349600.png" alt="Dr. Monica Bing">
+                    <h5>Dr. Monica Bing</h5>
+                    <p>Pediatric Dentist</p>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#timingModal7">View
+                        Timings</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="profile-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/843/843293.png" alt="Dr. Joey Tribbiani">
+                    <h5>Dr. Joey Tribbiani</h5>
+                    <p>Oral Pathologist</p>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#timingModal8">View
+                        Timings</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Timing Modals -->
+    <div class="modal fade" id="timingModal1" tabindex="-1" aria-labelledby="timingModal1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="timingModal1Label">Dr. Sarah Johnson - Timings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Monday to Friday: 9 AM - 5 PM<br>
+                    Saturday: 10 AM - 2 PM<br>
+                    Sunday: Closed
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="timingModal2" tabindex="-1" aria-labelledby="timingModal2Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="timingModal2Label">Dr. Mike Brown - Timings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Monday to Friday: 9 AM - 5 PM<br>
+                    Saturday: 10 AM - 2 PM<br>
+                    Sunday: Closed
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="timingModal3" tabindex="-1" aria-labelledby="timingModal3Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="timingModal1Label">Dr. Emily Davis - Timings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Monday to Friday: 9 AM - 5 PM<br>
+                    Saturday: 10 AM - 2 PM<br>
+                    Sunday: Closed
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="timingModal4" tabindex="-1" aria-labelledby="timingModal4Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="timingModal1Label">Dr. John Smith - Timings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Monday to Friday: 9 AM - 5 PM<br>
+                    Saturday: 10 AM - 2 PM<br>
+                    Sunday: Closed
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="timingModal5" tabindex="-1" aria-labelledby="timingModal5Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="timingModal1Label">Dr. Rachel Green - Timings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Monday to Friday: 9 AM - 5 PM<br>
+                    Saturday: 10 AM - 2 PM<br>
+                    Sunday: Closed
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="timingModal6" tabindex="-1" aria-labelledby="timingModal6Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="timingModal1Label">Dr. Ross Geller - Timings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Monday to Friday: 9 AM - 5 PM<br>
+                    Saturday: 10 AM - 2 PM<br>
+                    Sunday: Closed
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="timingModal7" tabindex="-1" aria-labelledby="timingModal7Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="timingModal1Label">Dr. Monica Bing - Timings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Monday to Friday: 9 AM - 5 PM<br>
+                    Saturday: 10 AM - 2 PM<br>
+                    Sunday: Closed
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="timingModal8" tabindex="-1" aria-labelledby="timingModal8Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="timingModal1Label">Dr. Joey Tribbiani - Timings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Monday to Friday: 9 AM - 5 PM<br>
+                    Saturday: 10 AM - 2 PM<br>
+                    Sunday: Closed
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add similar modals for other doctors -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <footer>
+        <div class="footer-container">
+            <!-- Section 1 -->
+            <div class="footer-section">
+                <h2
+                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    Services</h2>
+                <div class="button-section">
+                    <button
+                        style="border: none;background: none;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: white;"
+                        onclick="alert('More resources coming soon!')">GENERAL</button><br><br>
+                    <button
+                        style="border: none;background: none;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: white;"
+                        onclick="alert('More resources coming soon!')">COSMETIC</button><br><br>
+                    <button
+                        style="border: none;background: none;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: white;"
+                        onclick="alert('More resources coming soon!')">SURGICAL</button><br><br>
+
+                </div>
+
+            </div>
+
+            <!-- Section 2 -->
+            <div class="footer-section">
+                <h2
+                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    Our Office</h2>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="regularcare.html">Regular Care</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="patientseducation.html">Patients Education</a></li>
+                    <li><a href="contactus.html">Contact us</a></li>
+
+                </ul>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="footer-section">
+                <h2
+                    style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    Conatct Us</h2>
+                <ul>
+                    <li>5670 Greenwood Plaza Blvd Suite 404, Greenwood Village, CO 80111
+
+                        (720) 730-9140
+
+                        info@villagedentaldtc.com
+
+                    </li>
+
+                </ul>
+            </div>
+
+
+    </footer>
+</body>
+
+</html>
